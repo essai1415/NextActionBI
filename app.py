@@ -12,9 +12,9 @@ from streamlit_extras.colored_header import colored_header
 # PAGE CONFIGURATION
 # ===================
 st.set_page_config(
-    page_title="Jewelry Profitability Dashboard",
+    page_title="NextActionBI",
     layout="wide",
-    page_icon="💎"
+    page_icon="⬤⋆"
 )
 
 st.title("Suggested Immediate Next Action Plan")
@@ -304,5 +304,6 @@ for idx, (module_name, actions) in enumerate(action_modules.items()):
 if "assignment_status" in st.session_state:
     st.success(st.session_state["assignment_status"])
     del st.session_state["assignment_status"]
+
 
 
