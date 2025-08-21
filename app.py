@@ -23,27 +23,6 @@ st.write("Insights & action assignments with automatic email notifications.")
 # ===================
 # DATA LOADING
 # ===================
-@st.cache_data(show_spinner=False)
-def load_data():
-    try:
-        # Get file ID securely
-        file_id = st.secrets["gdrive"]["file_id"]
-        url = f"https://drive.google.com/uc?export=download&id={file_id}"
-        # Download and read Excel file using openpyxl engine
-        response = requests.get(url)
-        response.raise_for_status()
-
-        df = pd.read_excel(io.BytesIO(response.content), engine="openpyxl")
-
-        st.success(f"Data loaded: {df.shape[0]} rows, {df.shape[1]} columns")
-
-        return df
-
-    except Exception as e:
-        st.error(f"Failed to load data: {e}")
-        return pd.DataFrame()
-
-df = load_data()
 
 # ===================
 # EMAIL SENDING FUNCTION
@@ -325,4 +304,5 @@ for idx, (module_name, actions) in enumerate(action_modules.items()):
 if "assignment_status" in st.session_state:
     st.success(st.session_state["assignment_status"])
     del st.session_state["assignment_status"]
+
 
