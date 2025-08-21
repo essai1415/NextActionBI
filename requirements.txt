@@ -1,4 +1,19 @@
+# Core
 streamlit==1.48.1
+
+# Data handling
 pandas==2.3.2
+numpy==2.3.2
 openpyxl==3.1.5
+python-dateutil==2.9.0
+pytz==2025.2
+
+# Streamlit extras for UI
 streamlit-extras==1.0.0
+
+# Email (built-in, no need to install smtplib or email)
+# smtplib and email are part of Python standard library
+
+# Optional: plotting / visualization (if used later)
+altair==5.5.0
+pydeck==0.9.1
