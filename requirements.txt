@@ -9,7 +9,7 @@ python-dateutil==2.9.0
 pytz==2025.2
 
 # Streamlit extras for UI
-streamlit-extras==1.0.0
+streamlit-extras==0.7.6
 
 # Email (built-in, no need to install smtplib or email)
 # smtplib and email are part of Python standard library
