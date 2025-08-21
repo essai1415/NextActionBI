@@ -1,6 +1,4 @@
-streamlit
-pandas
-openpyxl
-smtplib
-email
-streamlit-extras
+streamlit==1.48.1
+pandas==2.3.2
+openpyxl==3.1.5
+streamlit-extras==1.0.0
