@@ -82,12 +82,12 @@ action_modules = {
         "✦ Next Steps from Daily Discount Insights"
     ],
     "Based On Multivariate Analysis": [
-        "🔹 Maximize Revenue from High Value Buyers",
-        "🔹 Optimize product mix where gold content is high"
+        "✦ Maximize Revenue from High Value Buyers",
+        "✦ Optimize product mix where gold content is high"
     ],
     "Based On Time Series Analysis": [
-        "🔹 Identify dips in weekly net margins for immediate correction",
-        "🔹 Flag discount spikes around campaign periods"
+        "✦ Identify dips in weekly net margins for immediate correction",
+        "✦ Flag discount spikes around campaign periods"
     ]
 }
 
@@ -118,7 +118,7 @@ example_actions = {
         "Use heavy discount days as anchors in ads.",
         "Segment customers by value and create bundled decoy offers."
     ],
-    "🔹 Maximize Revenue from High Value Buyers" : [
+    "✦ Maximize Revenue from High Value Buyers" : [
         "Offer add-ons like studs, chains, or bangles with 15–20% off to top buyers.",
         "Provide loyalty benefits to repeat customers."
     ]
@@ -304,6 +304,7 @@ for idx, (module_name, actions) in enumerate(action_modules.items()):
 if "assignment_status" in st.session_state:
     st.success(st.session_state["assignment_status"])
     del st.session_state["assignment_status"]
+
 
 
 
