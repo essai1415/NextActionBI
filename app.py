@@ -93,7 +93,7 @@ action_modules = {
 
 card_colors = [
     "linear-gradient(90deg, #BF82D9, #9333EA)",  # Purple gradient
-    "linear-gradient(135deg, #f9a8d4, #f472b6)",
+    "linear-gradient(135deg, #f87171, #ef4444)",
     "linear-gradient(90deg, #F6BB4D, #F59E0B)",  # Orange gradient
     "linear-gradient(90deg, #85B4D4, #3B82F6)"   # Teal/Blue gradient
 ]
@@ -304,6 +304,7 @@ for idx, (module_name, actions) in enumerate(action_modules.items()):
 if "assignment_status" in st.session_state:
     st.success(st.session_state["assignment_status"])
     del st.session_state["assignment_status"]
+
 
 
 
