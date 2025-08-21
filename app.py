@@ -74,12 +74,12 @@ Deadline: {deadline}
 # ===================
 action_modules = {
     "Based On Quantitative Analysis": [
-        " ✦ Next Steps by Purchase Quantity",
-        " ✦ Next Steps by Weight",
+        "✦ Next Steps by Purchase Quantity",
+        "✦ Next Steps by Weight",
     ],
     "Based On Qualitative Analysis": [
-        "🔹 Next Steps For Each Brand",
-        "🔹 Next Steps from Daily Discount Insights"
+        "✦ Next Steps For Each Brand",
+        "✦ Next Steps from Daily Discount Insights"
     ],
     "Based On Multivariate Analysis": [
         "🔹 Maximize Revenue from High Value Buyers",
@@ -108,12 +108,12 @@ example_actions = {
        "Heavy (10–20g) and Very Heavy (>20g) jewelry get the highest discounts (~6.7%). Reduce them slightly and increase Medium (5–10g) discounts to 6.5% to drive growth.",
        "Encourage Light/Very Light buyers to upgrade by making Medium look like the best value option."
     ],
-    "🔹 Next Steps For Each Brand" : [
+    "✦ Next Steps For Each Brand" : [
         "ZOYA: Review discounting to protect luxury positioning.",
         "TANISHQ: Focus on reducing high return rates.",
         "MIA: Improve customer satisfaction and retention."
     ],
-    "🔹 Next Steps from Daily Discount Insights" : [
+    "✦ Next Steps from Daily Discount Insights" : [
         "Introduce discount bands (₹5K, ₹10K, ₹20K) for consistency.",
         "Use heavy discount days as anchors in ads.",
         "Segment customers by value and create bundled decoy offers."
@@ -304,6 +304,7 @@ for idx, (module_name, actions) in enumerate(action_modules.items()):
 if "assignment_status" in st.session_state:
     st.success(st.session_state["assignment_status"])
     del st.session_state["assignment_status"]
+
 
 
 
