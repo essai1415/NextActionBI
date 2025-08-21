@@ -25,15 +25,23 @@ st.write("Insights & action assignments with automatic email notifications.")
 # ===================
 @st.cache_data(show_spinner=False)
 def load_data():
-    df = pd.read_excel("discansamp.xlsx", parse_dates=['docdate'])
-    df['day'] = df['docdate'].dt.date
-    df['cogs'] = df['goldprice'] + df['stonevalue']
-    df['gross_profit'] = df['value'] - df['cogs']
-    df['operating_cost'] = 0.05 * df['value']
-    df['net_profit'] = df['gross_profit'] - df['discount'] - df['operating_cost']
-    df['gross_margin'] = (df['gross_profit'] / df['value']) * 100
-    df['net_margin'] = (df['net_profit'] / df['value']) * 100
-    return df
+    try:
+        # Get file ID securely
+        file_id = st.secrets["gdrive"]["file_id"]
+        url = f"https://drive.google.com/uc?export=download&id={file_id}"
+        # Download and read Excel file using openpyxl engine
+        response = requests.get(url)
+        response.raise_for_status()
+
+        df = pd.read_excel(io.BytesIO(response.content), engine="openpyxl")
+
+        st.success(f"Data loaded: {df.shape[0]} rows, {df.shape[1]} columns")
+
+        return df
+
+    except Exception as e:
+        st.error(f"Failed to load data: {e}")
+        return pd.DataFrame()
 
 df = load_data()
 
@@ -317,3 +325,4 @@ for idx, (module_name, actions) in enumerate(action_modules.items()):
 if "assignment_status" in st.session_state:
     st.success(st.session_state["assignment_status"])
     del st.session_state["assignment_status"]
+
