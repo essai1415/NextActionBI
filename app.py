@@ -74,8 +74,8 @@ Deadline: {deadline}
 # ===================
 action_modules = {
     "Based On Quantitative Analysis": [
-        "🔹 Next Steps by Purchase Quantity",
-        "🔹 Next Steps by Weight",
+        " ⚬ Next Steps by Purchase Quantity",
+        " ⚬ Next Steps by Weight",
     ],
     "Based On Qualitative Analysis": [
         "🔹 Next Steps For Each Brand",
@@ -100,11 +100,11 @@ card_colors = [
 
 
 example_actions = {
-    '🔹 Next Steps by Purchase Quantity': [
+    '⚬ Next Steps by Purchase Quantity': [
         "Instead of discounting core items, we can offer “Buy any gold or diamond piece and get 20% off on studs, pendants, or chains.”",
         "Cross-sell with deals like “Buy this necklace, get 15% off matching bangles.”",
     ],
-    '🔹 Next Steps by Weight': [
+    '⚬ Next Steps by Weight': [
        "Heavy (10–20g) and Very Heavy (>20g) jewelry get the highest discounts (~6.7%). Reduce them slightly and increase Medium (5–10g) discounts to 6.5% to drive growth.",
        "Encourage Light/Very Light buyers to upgrade by making Medium look like the best value option."
     ],
@@ -304,6 +304,7 @@ for idx, (module_name, actions) in enumerate(action_modules.items()):
 if "assignment_status" in st.session_state:
     st.success(st.session_state["assignment_status"])
     del st.session_state["assignment_status"]
+
 
 
 
