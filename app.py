@@ -12,17 +12,63 @@ from streamlit_extras.colored_header import colored_header
 # PAGE CONFIGURATION
 # ===================
 st.set_page_config(
-    page_title="NextActionBI",
+    page_title="Next Action BI",
     layout="wide",
-    page_icon="⬤⋆"
+    page_icon="🛠️"
 )
 
-st.title("Suggested Immediate Next Action Plan")
-st.write("Insights & action assignments with automatic email notifications.")
+import base64
 
-# ===================
-# DATA LOADING
-# ===================
+# Load the image and convert to base64
+with open("titanLogo.png", "rb") as f:
+    data = f.read()
+    encoded = base64.b64encode(data).decode()
+
+# Title with logo
+st.markdown(
+    f"""
+    <div style="width: 100%; display: flex; align-items: center; gap: 18px; margin-bottom: 8px;">
+        <div style="background-color: white; width: 65px; height: 65px; border-radius: 10%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <img src="data:image/png;base64,{encoded}" style="width: 50px; height: 50px;"/>
+        </div>
+        <div>
+            <div style="font-size: 2.2rem; font-weight: 800; color: white; line-height: 1.2;">
+                Immediate Next Action Plan
+            </div>
+            <div style="font-size: 1rem; color: #ddd; line-height: 1.4;">
+                Insights & action assignments with email notifications.
+            </div>
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+# Custom CSS for popover button
+st.markdown(
+    """
+    <style>
+    /* Force styling for the popover button */
+    [data-testid="stPopover"] > div > button {
+        background: transparent !important;
+        border: 1.5px solid #ff4d4d !important;   /* Red border */
+        color: #ff4d4d !important;                /* Red text */
+        font-weight: 600 !important;
+        border-radius: 10px !important;
+        padding: 8px 16px !important;
+        transition: all 0.2s ease-in-out;
+    }
+
+    /* Hover effect */
+    [data-testid="stPopover"] > div > button:hover {
+        background: #ff4d4d20 !important;  /* light red background */
+        color: #ff4d4d !important;
+        border-color: #ff1a1a !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # ===================
 # EMAIL SENDING FUNCTION
@@ -74,20 +120,22 @@ Deadline: {deadline}
 # ===================
 action_modules = {
     "Based On Quantitative Analysis": [
-        "✦ Next Steps by Purchase Quantity",
-        "✦ Next Steps by Weight",
+        "✦ Immediate Next Action by Purchase Quantity",
+        "✦ Immediate Next Action by Weight",
+        "✦ Immediate Next Action by Making Charges",
+        "✦ Immediate Next Action Based On Stone Value"
     ],
     "Based On Qualitative Analysis": [
-        "✦ Next Steps For Each Brand",
-        "✦ Next Steps from Daily Discount Insights"
+        "✦ Immediate Next Action For Each Brand",
+        "✦ Immediate Next Action from Daily Discount Insights"
     ],
     "Based On Multivariate Analysis": [
         "✦ Maximize Revenue from High Value Buyers",
-        "✦ Optimize product mix where gold content is high"
+        "✦ Optimize Discount Strategy to Protect Margin & Luxury Perception"
     ],
     "Based On Time Series Analysis": [
-        "✦ Identify dips in weekly net margins for immediate correction",
-        "✦ Flag discount spikes around campaign periods"
+        "✦ Reducing Returns & Key Focus Areas",
+        "✦ Immediate Next Action - Saturday Sales Push"
     ]
 }
 
@@ -98,29 +146,56 @@ card_colors = [
     "linear-gradient(90deg, #85B4D4, #3B82F6)"   # Teal/Blue gradient
 ]
 
-
 example_actions = {
-    '✦ Next Steps by Purchase Quantity': [
-        "Instead of discounting core items, we can offer “Buy any gold or diamond piece and get 20% off on studs, pendants, or chains.”",
-        "Cross-sell with deals like “Buy this necklace, get 15% off matching bangles.”",
+    '✦ Immediate Next Action by Purchase Quantity': [
+        "✦ Instead of discounting core items, we can offer “Buy any gold or diamond piece and get 20% off on studs, pendants, or chains.”",
+        "✦ We can cross sell with deals like “Buy this necklace, get 15% off matching bangles.”",
+        "✦ This will increase the quantity of jewelry they purchase as well as the total bill value."
     ],
-    '✦ Next Steps by Weight': [
-       "Heavy (10–20g) and Very Heavy (>20g) jewelry get the highest discounts (~6.7%). Reduce them slightly and increase Medium (5–10g) discounts to 6.5% to drive growth.",
-       "Encourage Light/Very Light buyers to upgrade by making Medium look like the best value option."
+    '✦ Immediate Next Action by Weight': [
+       "✦ Heavy (10–20g) and Very Heavy (>20g) jewelry get the highest discounts (6.7%). Reduce them slightly and increase Medium (5–10g) discounts to 6.5% to drive growth.",
+       "✦ Encourage Light/Very Light buyers to upgrade by making Medium look like the best value option (Decoy strategy)."
     ],
-    "✦ Next Steps For Each Brand" : [
-        "ZOYA: Review discounting to protect luxury positioning.",
-        "TANISHQ: Focus on reducing high return rates.",
-        "MIA: Improve customer satisfaction and retention."
+    "✦ Immediate Next Action by Making Charges" : [
+        "✦ For discounts above ₹50,000, we can split it. For example we can give ₹30,000 off now + ₹20,000 shopping voucher for the next purchase. In past data, 371 bills had discounts over ₹50,000. If part of it is a voucher, customers must come back, which boosts future sales and reduces instant profit loss.",
+        "✦ For jewellery with Making Charges above ₹50,000, we can display 3 choices like Good, Better, Best (eg: ₹49k, ₹59k, ₹79k options). Because from data, 835 items had Making Charges above ₹50,000. By showing choices, customers are nudged to pick “Better” or “Best” options, increasing revenue without extra discounting.",
+        "✦ No single bill should get more than ₹1,00,000 discount. In past data, 142 bills crossed ₹1,00,000 in discounts. These very deep cuts directly eat into profit. A hard cap stops uncontrolled losses.",
+        "✦ We can test it for 2 weeks and review it. This short trial makes sure it doesn’t hurt overall sales while protecting profit. After 2 weeks, stakeholders can measure and adjust it."
     ],
-    "✦ Next Steps from Daily Discount Insights" : [
-        "Introduce discount bands (₹5K, ₹10K, ₹20K) for consistency.",
-        "Use heavy discount days as anchors in ads.",
-        "Segment customers by value and create bundled decoy offers."
+    "✦ Immediate Next Action Based On Stone Value" : [
+        "✦ DIA and GIS are our mid range stone categories, and together they account for 6,281 transactions with average stone values between ₹25,000 and ₹50,000. That’s nearly 2/3 of all our sales. This means even a small adjustment in how we manage discounts here by just 2–3% can have the biggest impact on our overall margins. So, this segment needs careful control on discounts, supported by value added offers like warranties or vouchers.",
+    ],
+    
+    "✦ Immediate Next Action For Each Brand" : [
+        "✦ ZOYA – Achieved ₹2.25 Cr sales from just 43 orders but with an extremely high average discount of ₹69k. This risks diluting luxury positioning → shift from heavy discounts to exclusivity perks",
+        "✦ TANISHQ – Delivered ₹92.9 Cr sales from 8203 orders with avg discount of ₹10.6k, but 349 returns hurt margins. Focus on reducing returns through better sizing guidance, quality checks, and clearer product info.",
+        "✦ MIA – ₹5.1 Cr sales from 1652 orders with an average discount of just ₹2.5k shows that customers like the brand at mid-level pricing. But with 68 returns, there’s a gap between what customers expect and what they actually receive. To fix this, MIA should improve product descriptions, images, and try-on/AR options so buyers feel more confident before purchasing, which will reduce returns and increase trust.",
+        "✦ ECOM – ₹45 L sales from 102 orders, zero returns, avg discount just ₹195 shows stable performance. We need to expand reach with stronger digital marketing and targeted acquisition."
+    ],
+    "✦ Immediate Next Action from Daily Discount Insights" : [
+        """✦ Observation:
+            During 'Festival of Diamonds' campaign, buyers showed willingness to spend high ticket sizes but were motivated primarily by deep discounts (₹15k to ₹23k average). This segment is price sensitive yet aspirational, they want luxury but only if it feels like a “win.”""",
+        """✦ Why It Matters:
+            If we continue to throw raw discounts at them, we’ll train them to wait only for mega sales.
+            Instead, if we flip their psychology and make them feel like special members and not bargain hunters, they’ll shop even without big discounts, stick with us, spend more on premium pieces, stay engaged, and recommend us to others."""
     ],
     "✦ Maximize Revenue from High Value Buyers" : [
-        "Offer add-ons like studs, chains, or bangles with 15–20% off to top buyers.",
-        "Provide loyalty benefits to repeat customers."
+        "✦ Experiences create stronger memories than money saved. A ₹50k discount is forgotten but a luxury photoshoot becomes a story they tell. For customers spending ₹5L+, replace the ₹50k discount with a professional couple’s photoshoot (worth ₹50k) featuring their new jewelry. This costs the same to us, but delivers 2x perceived value, boosts social sharing, and can generate 3 to 5 organic referrals per customer.",
+        "✦ People hate missing out more than they love getting a deal, so when luxury is offered for a limited time, the urgency feels real and natural. Tanishq can run a “Design of the Week”, a necklace or earring sold only for 5 days and then retired, creating urgency that pushes faster buying decisions and can lift sales by 10-15%, especially around occasions like Akshaya Tritiya."
+    ],
+    "✦ Optimize Discount Strategy to Protect Margin & Luxury Perception" : [
+        "✦ Zoya's discounts are way higher than than Tanishq and Mia. In South 3 it even hits 12.18%. We should pull this back closer to 8% which saves margin and keeps the luxury image intact.",
+        "✦ Ecom is giving 11.3% discounts, almost twice the stores. It is better to run short flash sales under 8% which keeps urgency alive without making customers expect big cuts every time."
+    ],
+    "✦ Reducing Returns & Key Focus Areas" : [
+        "✦ Out of 420 returns, about 170 (40%) are diamonds. If we double check stone quality and size before shipping, we can avoid at least 40 returns every month, saving around ₹25–30 lakh.",
+        "✦ Returns shoot up on sale days that trigger the most returns. On the 13th (22 returns), 25th (27), and 30th (31), returns spiked due to offers. If we fix the products and offers on those days, we can cut around 50 returns monthly, worth ₹35–40 lakh.",
+        "✦ Tanishq is a major source of returns: 118 out of 420 (28%) come from Tanishq, mainly diamonds and GIS. If we make customers try these in-store before buying online, we can cut 40–45 returns a month, saving ₹25–30 lakh."
+    ],
+    "✦ Immediate Next Action - Saturday Sales Push" : [
+        "✦ Weekends run at 5.94% avg. discount vs 5.57% on weekdays, but with fewer transactions (3,356 vs 6,182). If we balance weekend offers better, we can lift sales by 10–12% without cutting margins.",
+        "✦ Monday (6.40%) and Thursday (6.36%) have the steepest discounts but not the highest sales (1,055 and 1,506 txns). Trimming just 0.5% discount here saves ₹15–20 lakh monthly without hurting volumes.",    
+        "✦ Sunday is at 1,947 sales with 6.03% discount, while Saturday is only 1,409 at 5.84%. That’s ~40% more sales on Sunday for just 0.2% higher discount. Pushing offers and campaigns on Saturday can add ~500 sales weekly without extra discount."
     ]
 }
 
@@ -155,13 +230,13 @@ h2, .section-header {
 /* Cards */
 .custom-card {
     transition: all 0.3s ease-in-out;
-    padding: 1.5em;
+    padding: 1.2em;
     border-radius: 1.2em;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 600;
     text-align: center;
     color: #fff;
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
     background: rgba(255, 255, 255, 0.07);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -189,19 +264,6 @@ h2, .section-header {
     box-shadow: 0px 4px 15px rgba(0,0,0,0.25);
 }
 
-/* Cancel Button Styling */
-.stButton > button[kind="secondary"], 
-.stButton > button[title*="Cancel"], 
-.stButton > button:has-text("Cancel") {
-    background: linear-gradient(135deg, #ff6b6b, #d7385e) !important;
-}
-.stButton > button[kind="secondary"]:hover, 
-.stButton > button[title*="Cancel"]:hover, 
-.stButton > button:has-text("Cancel"):hover {
-    background: linear-gradient(135deg, #d7385e, #ff6b6b) !important;
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.25);
-}
-
 /* Popover Styling */
 [data-testid="stPopover"] {
     background: rgba(30, 30, 46, 0.85) !important;
@@ -217,19 +279,6 @@ h2, .section-header {
 [data-testid="stPopover"] h2 {
     color: #f6bb4d !important;
     font-weight: 700;
-}
-
-/* Popover Trigger Button */
-.stPopover > button {
-    background: linear-gradient(135deg, #6e8efb, #a777e3) !important;
-    color: white !important;
-    font-weight: 600;
-    border-radius: 0.8rem;
-    transition: all 0.3s ease;
-}
-.stPopover > button:hover {
-    background: linear-gradient(135deg, #a777e3, #6e8efb) !important;
-    transform: scale(1.05);
 }
 
 /* Next Actions Heading */
@@ -268,11 +317,18 @@ for idx, (module_name, actions) in enumerate(action_modules.items()):
                     st.markdown('<div class="next-actions-heading">Next Actions to Be Taken</div>', unsafe_allow_html=True)
                     bullets = get_next_actions(action)
                     for bullet in bullets:
-                        st.markdown(f"- {bullet}")
+                        st.markdown(
+                            f"""
+                            <div class="custom-card" style="background:linear-gradient(90deg,#BF82D9,#9333EA); text-align:left; font-size:0.95em;">
+                                {bullet}
+                            </div>
+                            """,
+                            unsafe_allow_html=True
+                        )
                     st.markdown("---")
                     action_text = st.text_area(
                         "Add further specific instructions or planned steps:",
-                        placeholder="E.g. Assign regional leads, request weekly update, etc.",
+                        placeholder="E.g. Assign tasks, request weekly update, etc.",
                         height=120,
                         key=f"action_text_{popup_key}"
                     )
@@ -305,12 +361,61 @@ if "assignment_status" in st.session_state:
     st.success(st.session_state["assignment_status"])
     del st.session_state["assignment_status"]
 
+# Reference Link
+st.markdown(
+    """
+    <style>
+    .header-container {
+        display: flex;
+        justify-content: flex-end;  /* Align only to right */
+        margin-top: 8px;
+        margin-bottom: 15px;
+    }
+    .yellow-line {
+        border: none;
+        border-top: 3px solid #FFD700; /* Yellow line */
+        margin: 15px 0;
+    }
+    .dashboard-link {
+        display: block;
+        padding: 14px 22px;
+        border-radius: 12px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        color: white !important;
+        background: linear-gradient(90deg, #BF82D9, #9333EA);
+        text-decoration: none !important;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.25), 
+                    inset 0 1px 6px rgba(255,255,255,0.2);
+        transition: all 0.3s ease;
+    }
+    .dashboard-link:hover {
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 0 12px 28px rgba(0,0,0,0.35), 
+                    inset 0 1px 8px rgba(255,255,255,0.25);
+        text-decoration: none !important;
+        color: white !important;
+    }
+    .dashboard-link span {
+        display: block;
+        font-size: 13px;
+        font-weight: 400;
+        margin-top: 4px;
+        opacity: 0.9;  
+        color: white !important;
+    }
+    </style>
 
+    <!-- Yellow line under title -->
+    <hr class="yellow-line">
 
-
-
-
-
-
-
-
+    <div class="header-container">
+        <a class="dashboard-link" href="https://discount-analysis-dashboard.streamlit.app/" target="_blank">
+            🌐 Open Discount Analysis Dashboard
+            <span>Explore AI-Powered Analytics With Chatbot Assistance</span>
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
