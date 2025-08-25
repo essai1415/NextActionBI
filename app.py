@@ -153,8 +153,8 @@ example_actions = {
         "✦ This will increase the quantity of jewelry they purchase as well as the total bill value."
     ],
     '✦ Immediate Next Action by Weight': [
-       "✦ Heavy (10–20g) and Very Heavy (>20g) jewelry get the highest discounts (6.7%). Reduce them slightly and increase Medium (5–10g) discounts to 6.5% to drive growth.",
-       "✦ Encourage Light/Very Light buyers to upgrade by making Medium look like the best value option (Decoy strategy)."
+       "✦ Currently, Heavy (10–20g) and Very Heavy (>20g) jewelry get the highest discounts at 6.7%, while Medium (5–10g) averages 6.2%.",
+       "✦ Shifting Medium to 6.5% and trimming Heavy/Very Heavy to 6.3% makes Medium the clear “best value,” creating a decoy effect that nudges Light/Very Light buyers (5.5–6.0%) to upgrade and positions Medium as the smartest choice."
     ],
     "✦ Immediate Next Action by Making Charges" : [
         "✦ In our data, 835 items had Making Charges above ₹50,000. By introducing a Good Better Best choice with ₹3.0L with ₹52k MC, ₹3.3L with ₹65k MC and ₹4.0L with ₹85k MC, customers are naturally nudged toward the middle or premium option. Even if 30% move to “Better” and 10% to “Best,” this simple decoy pricing approach can unlock nearly ₹50L additional revenue without increasing discounts, purely by guiding customers toward designs with higher Making Charges.",
