@@ -148,7 +148,7 @@ card_colors = [
 
 example_actions = {
     '✦ Immediate Next Action by Purchase Quantity': [
-        "✦ Instead of discounting core items, we can offer “Buy any gold or diamond piece and get 20% off on studs, pendants, or chains.”",
+        "✦ Instead of discounting core items, we can offer “Buy any gold or diamond piece and get 15 to 20% off on studs, pendants, or chains.”",
         "✦ We can cross sell with deals like “Buy this necklace, get 15% off matching bangles.”",
         "✦ This will increase the quantity of jewelry they purchase as well as the total bill value."
     ],
@@ -419,4 +419,5 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
