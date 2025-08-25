@@ -172,9 +172,9 @@ example_actions = {
         "✦ MIA – ₹5.1 Cr sales from 1652 orders with an average discount of just ₹2.5k shows that customers like the brand at mid-level pricing. But with 68 returns, there’s a gap between what customers expect and what they actually receive. To fix this, MIA should improve product descriptions, images, and try-on/AR options so buyers feel more confident before purchasing, which will reduce returns and increase trust.",
         "✦ ECOM – ₹45 L sales from 102 orders, zero returns, avg discount just ₹195 shows stable performance. We need to expand reach with stronger digital marketing and targeted acquisition."
     ],
-    "✦ Immediate Next Action from Daily Discount Insights" : [
+        "✦ Immediate Next Action from Daily Discount Insights" : [
         """✦ Observation:
-            During the 'Festival of Diamonds' campaign, customers were willing to make big purchases, but their buying decisions were driven mainly by substantial discounts, typically between ₹15k and ₹23k. This group is both aspirational and price-conscious, they desire luxury items, but only when it feels like they are getting a great deal."""
+            During the 'Festival of Diamonds' campaign, customers were willing to make big purchases, but their buying decisions were driven mainly by substantial discounts, typically between ₹15k and ₹23k. This group is both aspirational and price-conscious, they desire luxury items, but only when it feels like they are getting a great deal.""",
         """✦ Why It Matters:
             If we continue to throw raw discounts at them, we’ll train them to wait only for mega sales.
             Instead, if we flip their psychology and make them feel like special members and not bargain hunters, they’ll shop even without big discounts, stick with us, spend more on premium pieces, stay engaged, and recommend us to others."""
@@ -419,6 +419,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 
 
