@@ -140,10 +140,10 @@ action_modules = {
 }
 
 card_colors = [
-    "linear-gradient(90deg, #BF82D9, #9333EA)",  # Purple gradient
+    "linear-gradient(90deg, #BF82D9, #9333EA)", 
     "linear-gradient(135deg, #f87171, #ef4444)",
-    "linear-gradient(90deg, #F6BB4D, #F59E0B)",  # Orange gradient
-    "linear-gradient(90deg, #85B4D4, #3B82F6)"   # Teal/Blue gradient
+    "linear-gradient(90deg, #F6BB4D, #F59E0B)",  
+    "linear-gradient(90deg, #85B4D4, #3B82F6)"   
 ]
 
 example_actions = {
@@ -419,6 +419,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 
 
