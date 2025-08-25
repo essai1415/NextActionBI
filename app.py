@@ -174,7 +174,7 @@ example_actions = {
     ],
         "✦ Immediate Next Action from Daily Discount Insights" : [
         """✦ Observation:
-            During the 'Festival of Diamonds' campaign, customers were willing to make big purchases, but their buying decisions were driven mainly by substantial discounts, typically between ₹15k and ₹23k. This group is both aspirational and price-conscious, they desire luxury items, but only when it feels like they are getting a great deal.""",
+            During the 'The Festival of Diamonds' campaign, customers were willing to make big purchases, but their buying decisions were driven mainly by substantial discounts, typically between ₹15k and ₹23k. This group is both aspirational and price-conscious, they desire luxury items, but only when it feels like they are getting a great deal.""",
         """✦ Why It Matters:
             If we continue to throw raw discounts at them, we’ll train them to wait only for mega sales.
             Instead, if we flip their psychology and make them feel like special members and not bargain hunters, they’ll shop even without big discounts, stick with us, spend more on premium pieces, stay engaged, and recommend us to others."""
@@ -419,6 +419,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 
 
