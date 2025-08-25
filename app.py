@@ -195,7 +195,7 @@ example_actions = {
     "✦ Immediate Next Action - Saturday Sales Push" : [
         "✦ Weekends run at 5.94% avg. discount vs 5.57% on weekdays, but with fewer transactions (3,356 vs 6,182). If we balance weekend offers better, we can lift sales by 10–12% without cutting margins.",
         "✦ Monday (6.40%) and Thursday (6.36%) have the steepest discounts but not the highest sales (1,055 and 1,506 txns). Trimming just 0.5% discount here saves ₹15–20 lakh monthly without hurting volumes.",    
-        "✦ Sunday is at 1,947 sales with 6.03% discount, while Saturday is only 1,409 at 5.84%. That’s ~40% more sales on Sunday for just 0.2% higher discount. Pushing offers and campaigns on Saturday can add ~500 sales weekly without extra discount."
+        "✦ Sunday is at 1,947 sales with 6.03% discount, while Saturday is only 1,409 at 5.84%. That’s 40% more sales on Sunday for just 0.2% higher discount. Pushing offers and campaigns on Saturday can add ~500 sales weekly without extra discount."
     ]
 }
 
@@ -419,4 +419,5 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
