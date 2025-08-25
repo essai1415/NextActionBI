@@ -157,17 +157,17 @@ example_actions = {
        "✦ Encourage Light/Very Light buyers to upgrade by making Medium look like the best value option (Decoy strategy)."
     ],
     "✦ Immediate Next Action by Making Charges" : [
-        "✦ For discounts above ₹50,000, we can split it. For example we can give ₹30,000 off now + ₹20,000 shopping voucher for the next purchase. In past data, 371 bills had discounts over ₹50,000. If part of it is a voucher, customers must come back, which boosts future sales and reduces instant profit loss.",
-        "✦ For jewellery with Making Charges above ₹50,000, we can display 3 choices like Good, Better, Best (eg: ₹49k, ₹59k, ₹79k options). Because from data, 835 items had Making Charges above ₹50,000. By showing choices, customers are nudged to pick “Better” or “Best” options, increasing revenue without extra discounting.",
+        "✦ In our data, 835 items had Making Charges above ₹50,000. By introducing a Good Better Best choice with ₹3.0L with ₹52k MC, ₹3.3L with ₹65k MC and ₹4.0L with ₹85k MC, customers are naturally nudged toward the middle or premium option. Even if 30% move to “Better” and 10% to “Best,” this simple decoy pricing approach can unlock nearly ₹50L additional revenue without increasing discounts, purely by guiding customers toward designs with higher Making Charges.",
         "✦ No single bill should get more than ₹1,00,000 discount. In past data, 142 bills crossed ₹1,00,000 in discounts. These very deep cuts directly eat into profit. A hard cap stops uncontrolled losses.",
         "✦ We can test it for 2 weeks and review it. This short trial makes sure it doesn’t hurt overall sales while protecting profit. After 2 weeks, stakeholders can measure and adjust it."
     ],
     "✦ Immediate Next Action Based On Stone Value" : [
-        "✦ DIA and GIS are our mid range stone categories, and together they account for 6,281 transactions with average stone values between ₹25,000 and ₹50,000. That’s nearly 2/3 of all our sales. This means even a small adjustment in how we manage discounts here by just 2–3% can have the biggest impact on our overall margins. So, this segment needs careful control on discounts, supported by value added offers like warranties or vouchers.",
+        "✦ DIA and GIS are our mid range stone categories, and together they account for 6,281 transactions with average stone values between ₹25,000 and ₹50,000. That’s nearly 2/3 of all our sales. This means even a small adjustment in how we manage discounts here by just 2–3% can have the biggest impact on our overall margins. So, this segment needs careful control on discounts, supported by value added offers like vouchers.",
+        "✦ For discounts above ₹50,000, we can split it. For example we can give ₹30,000 off now + ₹20,000 shopping voucher for the next purchase. In past data, 371 bills had discounts over ₹50,000. If part of it is a voucher, customers must come back, which boosts future sales and reduces instant profit loss."
     ],
     
     "✦ Immediate Next Action For Each Brand" : [
-        "✦ ZOYA – Achieved ₹2.25 Cr sales from just 43 orders but with an extremely high average discount of ₹69k. This risks diluting luxury positioning → shift from heavy discounts to exclusivity perks",
+        "✦ ZOYA – Achieved ₹2.25 Cr sales from just 43 orders but with an extremely high average discount of ₹69k. This risks diluting luxury positioning so shift from heavy discounts to exclusivity perks like private previews and customization.",
         "✦ TANISHQ – Delivered ₹92.9 Cr sales from 8203 orders with avg discount of ₹10.6k, but 349 returns hurt margins. Focus on reducing returns through better sizing guidance, quality checks, and clearer product info.",
         "✦ MIA – ₹5.1 Cr sales from 1652 orders with an average discount of just ₹2.5k shows that customers like the brand at mid-level pricing. But with 68 returns, there’s a gap between what customers expect and what they actually receive. To fix this, MIA should improve product descriptions, images, and try-on/AR options so buyers feel more confident before purchasing, which will reduce returns and increase trust.",
         "✦ ECOM – ₹45 L sales from 102 orders, zero returns, avg discount just ₹195 shows stable performance. We need to expand reach with stronger digital marketing and targeted acquisition."
@@ -181,19 +181,19 @@ example_actions = {
     ],
     "✦ Maximize Revenue from High Value Buyers" : [
         "✦ Experiences create stronger memories than money saved. A ₹50k discount is forgotten but a luxury photoshoot becomes a story they tell. For customers spending ₹5L+, replace the ₹50k discount with a professional couple’s photoshoot (worth ₹50k) featuring their new jewelry. This costs the same to us, but delivers 2x perceived value, boosts social sharing, and can generate 3 to 5 organic referrals per customer.",
-        "✦ People hate missing out more than they love getting a deal, so when luxury is offered for a limited time, the urgency feels real and natural. Tanishq can run a “Design of the Week”, a necklace or earring sold only for 5 days and then retired, creating urgency that pushes faster buying decisions and can lift sales by 10-15%, especially around occasions like Akshaya Tritiya."
+        "✦ People hate missing out more than they love getting a deal, so when luxury is offered for a limited time, the urgency feels real and natural. Tanishq can run a “Design of the Week”, a necklace or earring sold only for 5 days and then retire it, creating urgency that pushes faster buying decisions and can lift sales by 10-15%, especially around occasions like Akshaya Tritiya."
     ],
     "✦ Optimize Discount Strategy to Protect Margin & Luxury Perception" : [
         "✦ Zoya's discounts are way higher than than Tanishq and Mia. In South 3 it even hits 12.18%. We should pull this back closer to 8% which saves margin and keeps the luxury image intact.",
         "✦ Ecom is giving 11.3% discounts, almost twice the stores. It is better to run short flash sales under 8% which keeps urgency alive without making customers expect big cuts every time."
     ],
     "✦ Reducing Returns & Key Focus Areas" : [
-        "✦ Out of 420 returns, about 170 (40%) are diamonds. If we double check stone quality and size before delivering, we can avoid at least 40 returns every month, saving around ₹25–30 lakh.",
+        "✦ Out of 420 returns, about 170 (40%) are diamonds. If we double check stone quality and size before shipping, we can avoid at least 40 returns every month, saving around ₹25–30 lakh.",
         "✦ Returns shoot up on sale days that trigger the most returns. On the 13th (22 returns), 25th (27), and 30th (31), returns spiked due to offers. If we fix the products and offers on those days, we can cut around 50 returns monthly, worth ₹35–40 lakh.",
-        "✦ Tanishq is a major source of returns: 118 out of 420 (28%) come from Tanishq, mainly diamonds and GIS. If we make customers try these in-store before buying online, we can cut 40–45 returns a month, saving ₹25–30 lakh."
+        "✦ Tanishq is a major source of returns: 118 out of 420 (28%) come from Tanishq, mainly diamonds and GIS. If we make customers try these in-store before buying, we can cut 40–45 returns a month, saving ₹25–30 lakh."
     ],
     "✦ Immediate Next Action - Saturday Sales Push" : [
-        "✦ Weekends run at 5.94% avg. discount vs 5.57% on weekdays, but with fewer transactions (3,356 vs 6,182). If we balance weekend offers better, we can lift sales by 10–12% without cutting margins.",
+        "✦ Weekends run at 5.94% average discount vs 5.57% on weekdays, but with fewer transactions (3,356 vs 6,182). If we balance weekend offers better, we can lift sales by 10–12% without cutting margins.",
         "✦ Monday (6.40%) and Thursday (6.36%) have the steepest discounts but not the highest sales (1,055 and 1,506 txns). Trimming just 0.5% discount here saves ₹15–20 lakh monthly without hurting volumes.",    
         "✦ Sunday is at 1,947 sales with 6.03% discount, while Saturday is only 1,409 at 5.84%. That’s 40% more sales on Sunday for just 0.2% higher discount. Pushing offers and campaigns on Saturday can add ~500 sales weekly without extra discount."
     ]
@@ -419,5 +419,3 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-
