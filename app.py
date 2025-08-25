@@ -157,7 +157,7 @@ example_actions = {
        "✦ Shifting Medium to 6.5% and trimming Heavy/Very Heavy to 6.3% makes Medium the clear “best value,” creating a decoy effect that nudges Light/Very Light buyers (5.5–6.0%) to upgrade and positions Medium as the smartest choice."
     ],
     "✦ Immediate Next Action by Making Charges" : [
-        "✦ In our data, 835 items had Making Charges above ₹50,000. By introducing a Good Better Best choice with ₹3.0L with ₹52k MC, ₹3.3L with ₹65k MC and ₹4.0L with ₹85k MC, customers are naturally nudged toward the middle or premium option. Even if 30% move to “Better” and 10% to “Best,” this simple decoy pricing approach can unlock nearly ₹50L additional revenue without increasing discounts, purely by guiding customers toward designs with higher Making Charges.",
+        "✦ In our data, 835 items had Making Charges above ₹50,000. By introducing a Good, Better, Best choice with ₹3.0L with ₹52k MC, ₹3.3L with ₹65k MC and ₹4.0L with ₹85k MC, customers are naturally nudged toward the middle or premium option. Even if 30% move to “Better” and 10% to “Best,” this simple decoy pricing approach can unlock nearly ₹50L additional revenue without increasing discounts, purely by guiding customers toward designs with higher Making Charges.",
         "✦ No single bill should get more than ₹1,00,000 discount. In past data, 142 bills crossed ₹1,00,000 in discounts. These very deep cuts directly eat into profit. A hard cap stops uncontrolled losses.",
         "✦ We can test it for 2 weeks and review it. This short trial makes sure it doesn’t hurt overall sales while protecting profit. After 2 weeks, stakeholders can measure and adjust it."
     ],
@@ -419,3 +419,4 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
