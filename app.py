@@ -188,7 +188,7 @@ example_actions = {
         "✦ Ecom is giving 11.3% discounts, almost twice the stores. It is better to run short flash sales under 8% which keeps urgency alive without making customers expect big cuts every time."
     ],
     "✦ Reducing Returns & Key Focus Areas" : [
-        "✦ Out of 420 returns, about 170 (40%) are diamonds. If we double check stone quality and size before shipping, we can avoid at least 40 returns every month, saving around ₹25–30 lakh.",
+        "✦ Out of 420 returns, about 170 (40%) are diamonds. If we double check stone quality and size before delivering, we can avoid at least 40 returns every month, saving around ₹25–30 lakh.",
         "✦ Returns shoot up on sale days that trigger the most returns. On the 13th (22 returns), 25th (27), and 30th (31), returns spiked due to offers. If we fix the products and offers on those days, we can cut around 50 returns monthly, worth ₹35–40 lakh.",
         "✦ Tanishq is a major source of returns: 118 out of 420 (28%) come from Tanishq, mainly diamonds and GIS. If we make customers try these in-store before buying online, we can cut 40–45 returns a month, saving ₹25–30 lakh."
     ],
@@ -419,3 +419,4 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
